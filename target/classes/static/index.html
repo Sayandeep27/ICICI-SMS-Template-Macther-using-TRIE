@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SMS Template Matcher</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Realtime SMS template demo</p>
+        <h1>Match incoming SMS text to a stored template in one click.</h1>
+        <p class="lede">
+          Paste a source message, hit Match, and see the template ID plus extracted variables immediately.
+        </p>
+      </div>
+
+      <div class="hero-metrics">
+        <div class="metric-card">
+          <span class="metric-label">Seeded templates</span>
+          <strong id="templateCount">30</strong>
+        </div>
+        <div class="metric-card">
+          <span class="metric-label">Saved matches</span>
+          <strong id="resultCount">0</strong>
+        </div>
+      </div>
+    </header>
+
+    <section class="grid">
+      <article class="panel composer">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Source message</p>
+            <h2>Test any SMS here</h2>
+          </div>
+
+          <div class="sample-row">
+            <label for="sampleSelect">Samples</label>
+            <select id="sampleSelect">
+              <option value="2">Template 2</option>
+              <option value="8">Template 8</option>
+              <option value="24">Template 24</option>
+            </select>
+            <button id="loadSampleBtn" class="secondary">Load</button>
+          </div>
+        </div>
+
+        <textarea id="messageInput" spellcheck="false"></textarea>
+
+        <div class="actions">
+          <button id="matchBtn">Match message</button>
+          <button id="resetBtn" class="secondary">Reset</button>
+        </div>
+      </article>
+
+      <aside class="panel result">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Match result</p>
+            <h2>What the engine found</h2>
+          </div>
+          <span id="statusBadge" class="badge idle">Waiting</span>
+        </div>
+
+        <div class="result-grid">
+          <div class="result-box">
+            <span class="result-label">Template ID</span>
+            <strong id="matchedTemplateId">-</strong>
+          </div>
+          <div class="result-box">
+            <span class="result-label">Extracted values</span>
+            <strong id="matchedValues">-</strong>
+          </div>
+        </div>
+
+        <div class="message-preview">
+          <span class="result-label">Message</span>
+          <p id="matchedMessage">Paste a message and match it to see the result here.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="grid lower">
+      <article class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Templates</p>
+            <h2>What is already in the database</h2>
+          </div>
+          <button id="refreshTemplatesBtn" class="secondary">Refresh</button>
+        </div>
+        <div id="templatesList" class="list"></div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="panel-kicker">Recent output</p>
+            <h2>Latest saved matches</h2>
+          </div>
+          <button id="refreshResultsBtn" class="secondary">Refresh</button>
+        </div>
+        <div id="resultsList" class="list"></div>
+      </article>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

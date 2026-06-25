@@ -1,12 +1,13 @@
 E:\sms-template-matcher\src\main\java\com\sms\matcher\DataLoader.java
+E:\sms-template-matcher\src\main\java\com\sms\matcher\SmsTemplateSchemaMigration.java
 E:\sms-template-matcher\src\main\java\com\sms\matcher\trie\MatchResult.java
+E:\sms-template-matcher\src\main\java\com\sms\matcher\SmsTemplateMatcherApplication.java
+E:\sms-template-matcher\src\main\java\com\sms\matcher\service\TemplateService.java
+E:\sms-template-matcher\src\main\java\com\sms\matcher\trie\TemplateTrie.java
 E:\sms-template-matcher\src\main\java\com\sms\matcher\model\SmsTemplate.java
 E:\sms-template-matcher\src\main\java\com\sms\matcher\controller\SmsController.java
 E:\sms-template-matcher\src\main\java\com\sms\matcher\StartupMatcherRunner.java
 E:\sms-template-matcher\src\main\java\com\sms\matcher\repository\SmsTemplateRepository.java
-E:\sms-template-matcher\src\main\java\com\sms\matcher\SmsTemplateMatcherApplication.java
 E:\sms-template-matcher\src\main\java\com\sms\matcher\repository\TemplateMatchResultRepository.java
-E:\sms-template-matcher\src\main\java\com\sms\matcher\service\TemplateService.java
 E:\sms-template-matcher\src\main\java\com\sms\matcher\model\TemplateMatchResult.java
 E:\sms-template-matcher\src\main\java\com\sms\matcher\trie\TrieNode.java
-E:\sms-template-matcher\src\main\java\com\sms\matcher\trie\TemplateTrie.java

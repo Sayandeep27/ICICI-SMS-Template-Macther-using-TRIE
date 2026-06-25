@@ -22,14 +22,15 @@ public class StartupMatcherRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        String sourceMessage = "Dear Customer,your OTP is 4532,valid for 2 mins.";
-
-        try {
+        String sourceMessage = "Dear Rahul, Ankit has applied for an ICICI Bank Plus Card for you. To complete the process and get your card, please click on the consent link sent to your email.";
+           
+       
+           try {
             TemplateMatchResult result = templateService.processMessage(sourceMessage);
             log.info("Startup match result: templateId={}, values={}, message={}",
                     result.getTemplateId(),
                     result.getExtractedValues(),
-                    result.getIncomingMessage());
+                    result.getIncomingMessage()); 
         } catch (Exception ex) {
             log.error("Startup match failed for message: {}", sourceMessage, ex);
         }

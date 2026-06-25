@@ -16,6 +16,6 @@ public class SmsTemplate {
     private Long id;
 
     // Example: "Dear Customer,your OTP is {#var},valid for {#var} mins."
-    @Column(name = "template_text", nullable = false, unique = true)
+    @Column(name = "template_text", nullable = false)
     private String templateText;
 }
